@@ -35,7 +35,7 @@ def get_cmd_arguments():
         if sys.argv[1]!='-e':
             print_error_message(sys.argv)
             return
-        if sys.argv[3]!='-o':
+        if sys.argv[3]!='-m':
             print_error_message(sys.argv)
             return
         call_encoder(sys.argv[2],sys.argv[4])
