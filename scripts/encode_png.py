@@ -1,5 +1,5 @@
 from PIL import Image
-from utils.string_to_binary import string_to_binary
+from scripts.utils.string_to_binary import string_to_binary
 
 
 #input_tuple is an RGBA value, this function takes a message and

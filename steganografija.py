@@ -7,8 +7,8 @@ def print_help_message():
     print("This is a help message")
 
 def print_error_message(args):
-    command=' '.join(args[1:])
-    print("Unrecognized command "+command)
+    command=' '.join(args)
+    print("Unrecognized command: "+command)
     print("Try \"steganografija --help\" for help")
 
 
