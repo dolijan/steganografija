@@ -46,7 +46,9 @@ def encode_png(file_path,message_path):
     pixels=image.load() #pixels is a matrix of 4-tuples
     n,m=image.size
     
-    message=string_to_binary(open(message_path,"r").read())
+    message_ascii=open(message_path,"r").read()
+    delimiter="$"+str(len(message_ascii))+"$" #we need a delimiter so that we can know how many charachter to read when decoding
+    message=string_to_binary(delimiter+message_ascii)
 
     if len(message)>4*n*m:
         print("Error:The message is too big")
