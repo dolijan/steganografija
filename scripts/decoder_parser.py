@@ -1,5 +1,6 @@
-from scripts.decode_png import decode_png
 from scripts.file_type_decider import file_type_decider
+from scripts.decode_png import decode_png
+from scripts.unicode_decoder import decode_unicode
 
 def call_decoder(file_path):
     #get the file type of the specified file
@@ -12,3 +13,5 @@ def call_decoder(file_path):
     #call the appropriate decoder
     if file_id==1:
         decode_png(file_path)
+    elif file_id==3:
+        decode_unicode(file_path)

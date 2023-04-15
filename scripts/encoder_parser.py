@@ -1,5 +1,6 @@
-from scripts.encode_png import encode_png
 from scripts.file_type_decider import file_type_decider
+from scripts.encode_png import encode_png
+from scripts.unicode_encoder import encode_unicode
 
 def call_encoder(file_path,message_path):
     #get the file type of the specified file
@@ -19,6 +20,8 @@ def call_encoder(file_path,message_path):
     #call the appropriate decoder
     if file_id==1:
         encode_png(file_path,message_path)
+    elif file_id==3 or file_id==2:
+        encode_unicode(file_path,message_path)
     
 
 
