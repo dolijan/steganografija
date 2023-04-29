@@ -14,3 +14,33 @@ Zatim se prebaciti u odgovarajuci folder(steganografija) i instalirati odgovaraj
 pip install -r requirements.txt
 ```
 
+## Ugradjivanje fajlova u sliku
+
+Prvo je potrebno sacuvati sliku u koju se ugradjuje fajl i fajl koji ugradjujemo (za sada je moguce ugraditi samo ASCII text fajlove).
+
+Zatim treba pokrenuti komandu
+
+```
+python3 steganografija.py -e ime_slike.png -m ime_fajla.txt
+```
+
+Iz postojece slike moze se izvuci fajl komandom
+
+```
+python3 steganografija.py -d ime_slike.png
+```
+
+## Ugradjivanje nevidljive poruke u tekst
+
+Treba napraviti 2 text fajla: jedan u koji se ugradjuje poruka i jedan koji sadrzi samu poruku.
+
+```
+python3 steganografija.py -e fajl.txt -m ime_fajla_sa_porukom.txt
+```
+
+Dekodiranje se vrsi sledecom komandom:
+
+```
+python3 steganogradija.py -d fajl.txt
+```
+
