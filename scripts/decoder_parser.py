@@ -1,5 +1,5 @@
 from scripts.file_type_decider import file_type_decider
-from scripts.decode_png import decode_png
+from scripts.png_decoder import decode_png
 from scripts.unicode_decoder import decode_unicode
 
 def call_decoder(file_path):

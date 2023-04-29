@@ -1,5 +1,5 @@
 from scripts.file_type_decider import file_type_decider
-from scripts.encode_png import encode_png
+from scripts.png_encoder import encode_png
 from scripts.unicode_encoder import encode_unicode
 
 def call_encoder(file_path,message_path):
