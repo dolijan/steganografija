@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 ## Ugradjivanje fajlova u sliku
 
-Prvo je potrebno sacuvati sliku u koju se ugradjuje fajl i fajl koji ugradjujemo (za sada je moguce ugraditi samo ASCII text fajlove).
+Prvo je potrebno sacuvati sliku u koju se ugradjuje fajl i fajl koji ugradjujemo (moguce je ugraditi skoro svaki format fajla).
 
 Zatim treba pokrenuti komandu
 
@@ -29,6 +29,8 @@ Iz postojece slike moze se izvuci fajl komandom
 ```
 python3 steganografija.py -d ime_slike.png
 ```
+
+Ukoliko fajl koji je ekstraktovan nece da se otvori, onda ga treba preimenovati i dodati mu odgovarajuci sufiks (.txt, .png , .exe) . Ovo ocekujem da moze da se desi na windowsu.
 
 ## Ugradjivanje nevidljive poruke u tekst
 

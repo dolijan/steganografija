@@ -45,5 +45,20 @@ def decode_png(file_path):
     i=i+1
     end_index=i+length
 
-    print("The decoded message is:")
-    print(whole_message[i:end_index])
+    #this is our file in binary, but latin-1 encoded
+    message_latin_encoded=whole_message[i:end_index]
+
+
+    #here we transform the message into bytes and save it into the file
+    #TODO:add a file suffix, depending on the tipe of the encoded file
+    #somehow manage to do that without saving the file first......
+    print("Succesffully decoded the image.")
+    
+    file_path=file_path.removesuffix("_encoded.png")
+    embedded_file_name=file_path.removesuffix(".png")+"_decoded"
+
+    message_bytes=bytes(message_latin_encoded,"latin-1")
+    file_new=open(embedded_file_name,"wb")
+    file_new.write(message_bytes)
+    
+    file_new.close()

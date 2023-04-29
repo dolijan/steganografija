@@ -12,7 +12,7 @@ def call_encoder(file_path,message_path):
 
     #check that the message is a simple .txt file
     message_id=file_type_decider(message_path)
-    if message_id!=2:
+    if message_id!=2 and file_id!=1:
         #TODO:print the file type in order to give more information
         print("Message needs to be an ASCII text file (.txt)")
         return 

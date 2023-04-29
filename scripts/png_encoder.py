@@ -46,7 +46,7 @@ def encode_png(file_path,message_path):
     pixels=image.load() #pixels is a matrix of 4-tuples
     n,m=image.size
     
-    message_ascii=open(message_path,"r").read()
+    message_ascii=open(message_path,"rb").read().decode("latin-1")
     delimiter="$"+str(len(message_ascii))+"$" #we need a delimiter so that we can know how many charachter to read when decoding
     message=string_to_binary(delimiter+message_ascii)
 
@@ -58,3 +58,4 @@ def encode_png(file_path,message_path):
 
 
     final_picture.save(file_path.removesuffix('.png')+"_encoded.png")
+
