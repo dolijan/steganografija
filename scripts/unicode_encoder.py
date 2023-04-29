@@ -2,6 +2,7 @@
 #message in morse code (in order to save up space)
 
 from scripts.utils.morse_code import encode_morse
+import sys
 
 # '-' corresponds to zero width joiner
 # '.' corresponds to zero width non joiner 
@@ -34,6 +35,7 @@ def encode_unicode(file_path,message_path):
         morse_code=encode_morse(message)
     except:
         print("Error:Mesage has to be a string of english charachters without spaces")
+        sys.exit(1)
     
     final_message=encode_char_with_joiners(morse_code[0])
     for i in range(len(plaintext)):
@@ -49,4 +51,5 @@ def encode_unicode(file_path,message_path):
         encoded_file.write(final_message)
     except:
         print("File with the name "+encoded_file_name+" already exists, please delete it before proceeding")
+        sys.exit(1)
 
